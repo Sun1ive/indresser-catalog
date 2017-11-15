@@ -15,8 +15,6 @@
 </template>
 
 <script>
-import store from '@/store/index';
-
 export default {
   methods: {
     goToItem(id) {
@@ -25,7 +23,7 @@ export default {
   },
   computed: {
     catalog() {
-      return store;
+      return this.$store.state.items;
     },
   },
 };
