@@ -6,7 +6,7 @@
         <img :src="item.img" :alt="item.title" @click="goToItem(item)">
       </div>
       <div class="buttons">
-         <a class="myButtonRed">Купить</a> <a class="myButtonGreen">Подробнее</a>
+         <a class="myButtonRed">Купить</a> <a class="myButtonGreen" @click="goToItem(item)">Подробнее</a>
       </div>
     </div>
   </div>

@@ -30,8 +30,10 @@ export default {
   color: #2c3e50;
   display: flex;
   flex-direction: column;
+  background-image: url('./assets/bg.png');
 }
 main {
   min-height: 100vh;
+  margin: 1rem;
 }
 </style>

@@ -41,7 +41,6 @@
 	top:1px;
 }
 
-
 .myButtonGreen {
 	-moz-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
 	-webkit-box-shadow:inset 0px 1px 0px 0px #d9fbbe;
@@ -83,4 +82,8 @@
 .myButtonGreen:active {
 	position:relative;
 	top:1px;
+}
+
+h1 {
+	font-size: responsive 2rem 3.5rem;
 }
