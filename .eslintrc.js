@@ -31,6 +31,7 @@ module.exports = {
     }],
     "quotes": [0, "backtick", "single"],
     'linebreak-style': 0,
+    "no-param-reassign": [2, { "props": false }],
     // allow optionalDependencies
     'import/no-extraneous-dependencies': ['error', {
       'optionalDependencies': ['test/unit/index.js']

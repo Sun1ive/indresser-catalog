@@ -3,10 +3,10 @@
   <div class="column is-one-quarter" v-for="(item, i) in catalog" :key="i">
     <div class="card">
       <div class="card-image">
-        <img :src="item.img" :alt="item.title" @click="goToItem(item.id)">
+        <img :src="item.img" :alt="item.title" @click="goToItem(item)">
       </div>
-      <div class="card-content">
-        <div class="content">{{ item.desc }}</div>
+      <div class="buttons">
+         <a class="myButtonRed" @click="goToOrder(item)">Купить</a> <a class="myButtonGreen" @click="goToItem(item)">Подробнее</a>
       </div>
     </div>
   </div>
@@ -15,17 +15,20 @@
 </template>
 
 <script>
-import store from '@/store/index';
-
 export default {
   methods: {
-    goToItem(id) {
-      this.$router.push(`/catalog/${id}`);
+    goToItem(item) {
+      this.$store.commit('getCurrentItem', item);
+      this.$router.push(`/${item.id}`);
+    },
+    goToOrder(item) {
+      this.$store.commit('getCurrentItem', item);
+      this.$router.push('/order');
     },
   },
   computed: {
     catalog() {
-      return store;
+      return this.$store.state.items;
     },
   },
 };
@@ -33,6 +36,12 @@ export default {
 
 <style scoped>
 .card-image img {
-  max-height: 500px;
+  max-height: 675px;
+  cursor: pointer;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0 2rem;
 }
 </style>

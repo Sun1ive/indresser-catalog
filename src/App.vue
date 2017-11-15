@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <app-Header></app-header>
-    <router-view/>
+    <main>
+      <router-view/>
+    </main>
     <app-Footer></app-Footer>
   </div>
 </template>
@@ -21,12 +23,17 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Open-Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   display: flex;
   flex-direction: column;
+  background-image: url('./assets/bg.png');
+}
+main {
+  min-height: 100vh;
+  margin: 1rem;
 }
 </style>
