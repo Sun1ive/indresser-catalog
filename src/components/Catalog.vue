@@ -2,13 +2,13 @@
   <div class="container is-fluid">
     <h1>this is a main page</h1>
 
-  <!--  <slider animation="fade">
-      <slider-item v-for="(i, index) in list" :key="index">
+   <slider animation="fade">
+      <slider-item height="700px" v-for="(item, i) in currentItem.gallery" :key="i">
         <div>
-           <img :src="" alt=""> 
+           <img :src="item" alt=""> 
         </div>
       </slider-item>
-    </slider> -->
+    </slider>
   </div>
 </template>
 
@@ -21,8 +21,12 @@ export default {
     SliderItem,
   },
   data() {
-    return {
-    };
+    return {};
+  },
+  computed: {
+    currentItem() {
+      return this.$store.state.currentItem;
+    },
   },
 };
 </script>
