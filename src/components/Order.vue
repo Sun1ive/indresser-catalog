@@ -39,7 +39,6 @@ export default {
   },
   methods: {
     submit() {
-      alert(1);
     },
   },
   computed: {
@@ -70,8 +69,8 @@ h3 {
   text-align: left;
 }
 img {
-  max-width: 200px;
-  max-height: 300px;
+  max-width: 400px;
+  max-height: 400px;
   border-radius: 6px;
 }
 </style>

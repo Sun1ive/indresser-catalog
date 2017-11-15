@@ -49,7 +49,7 @@ export default {
     },
   },
   mounted() {
-    const ITEM = this.$store.state.currentItem;
+    const ITEM = this.$store.state.currentItem.title;
     if (ITEM === '') {
       this.$router.push('/');
     }

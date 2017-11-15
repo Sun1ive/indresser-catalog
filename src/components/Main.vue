@@ -1,5 +1,5 @@
 <template>
-  <div class="container is-fluid">
+  <div class="container ">
     <app-Card></app-Card>
   </div>
 </template>
