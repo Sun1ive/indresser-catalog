@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>There is a main page for catalog</h1>
+    <div class="box">
+      <img src="../assets/dresses/d16_1.jpg" alt="">
+    </div>
   </div>
 </template>
 
