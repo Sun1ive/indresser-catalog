@@ -1,14 +1,47 @@
 <template>
-  <div>
-    <h1>this is an order page</h1>
-    <h2>{{ currentItem.title }}</h2>
-    <img :src="currentItem.img" alt="">
-    KYPIT'
+  <div class="container is-fluid">
+    <form class="form" @submit.prevent="submit">
+    <h3>{{ currentItem.title }}</h3>
+    <img :src="currentItem.img" :alt="currentItem.title">
+      <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Name">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">Phone</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="Phone">
+        </div>
+      </div>
+      <div class="field">
+        <label class="label">email</label>
+        <div class="control">
+          <input class="input" type="text" placeholder="email">
+        </div>
+      </div>
+      <button type="submit" class="myButton Red">Подтвердить заказ</button>
+    </form>
   </div>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      userData: {
+        name: '',
+        phone: '',
+        email: '',
+      },
+    };
+  },
+  methods: {
+    submit() {
+      alert(1);
+    },
+  },
   computed: {
     currentItem() {
       return this.$store.state.currentItem;
@@ -18,5 +51,27 @@ export default {
 </script>
 
 <style scoped>
-
+.form {
+  background-color: #fff;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+h3 {
+  font-size: responsive 1rem 2rem;
+  margin-bottom: 1rem;
+}
+.form .myButton {
+  outline: none;
+  border: transparent;
+  color: #fff;
+}
+.form .label {
+  text-align: left;
+}
+img {
+  max-width: 200px;
+  max-height: 300px;
+  border-radius: 6px;
+}
 </style>

@@ -3,7 +3,6 @@
 
     <a class="button is-link" @click="backToCatalog">Вернуться назад в каталог</a>
 
-    <h1>{{ currentItem.title }}</h1>
     <slider animation="fade">
       <slider-item height="500px" v-for="(item, i) in currentItem.gallery" :key="i">
         <div>
@@ -13,14 +12,14 @@
     </slider>
 
     <div class="box">
-      <div>{{ currentItem.title }}</div>
+      <h3>{{ currentItem.title }}</h3>
       <div>Цена: <span class="red">{{ currentItem.price }}</span> грн</div>
       <div>{{ currentItem.desc.one }}</div>
       <div>{{ currentItem.desc.two }}</div>
       <div>{{ currentItem.desc.three }}</div>
       <div>{{ currentItem.desc.four }}</div>
       <div>{{ currentItem.desc.five }}</div>
-      <div class="myButtonRed" @click="buyIt(currentItem)">Купить</div>
+      <div class="myButton darkGold" @click="buyIt(currentItem)">Купить</div>
     </div>
   </div>
 </template>
@@ -61,23 +60,37 @@ export default {
 <style scoped>
 .container {
   position: relative;
-}
-.button {
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-}
-.myButtonRed {
-  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
 }
 .box {
-  margin-top: 1rem;
-  max-width: 500px;
-  margin: 0 auto;
+  min-width: 200px;
+  text-align: left;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
   font-size: responsive 1rem 1.1rem;
+  background-color: #000;
+  color: #fff;
+  font-size: responsive 1rem 1.5rem;
+  padding: 1rem 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.box h3 {
+  font-size: 2rem;
 }
 .box .red {
   color: red;
   font-size: responsive 1rem 1.5rem;
+}
+.button {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+.myButton {
+  margin-top: 1rem;
 }
 </style>

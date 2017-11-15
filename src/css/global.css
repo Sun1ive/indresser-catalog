@@ -1,5 +1,32 @@
-
-
 h1 {
 	font-size: responsive 2rem 3.5rem;
+}
+
+.myButton {
+	border-radius: 6px;
+	min-height: 30px;
+	font-family: 'Open-Sans-Bold';
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	max-width: 200px;
+	font-family: OpenSans-Semibold, Arial, Helvetica, sans-serif;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.Red {
+	background-color: #FF2226;
+	transition: .4s linear;
+}
+.Red:hover {
+	background-color: rgb(148, 20, 20)
+}
+.darkGold {
+	background-color: #917438;
+	transition: .4s linear;
+}
+.darkGold:hover {
+	background-color: #644c1c;
 }

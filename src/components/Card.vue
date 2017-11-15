@@ -6,7 +6,7 @@
         <img :src="item.img" :alt="item.title" @click="goToItem(item)">
       </div>
       <div class="buttons">
-         <a class="myButtonRed" @click="goToOrder(item)">Купить</a> <a class="myButtonGreen" @click="goToItem(item)">Подробнее</a>
+         <a class="myButton Red" @click="goToOrder(item)">Купить</a> <a class="myButton darkGold" @click="goToItem(item)">Подробнее</a>
       </div>
     </div>
   </div>
@@ -35,6 +35,10 @@ export default {
 </script>
 
 <style scoped>
+.card {
+  background-color: #212121;
+}
+
 .card-image img {
   max-height: 675px;
   cursor: pointer;
@@ -43,5 +47,9 @@ export default {
   display: flex;
   justify-content: space-around;
   padding: 1rem 0 2rem;
+}
+a {
+  color: #fff;
+  max-width: 150px;
 }
 </style>
