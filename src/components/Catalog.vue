@@ -20,7 +20,7 @@
       <div>{{ currentItem.desc.three }}</div>
       <div>{{ currentItem.desc.four }}</div>
       <div>{{ currentItem.desc.five }}</div>
-      <div class="myButtonRed">Купить</div>
+      <div class="myButtonRed" @click="buyIt(currentItem)">Купить</div>
     </div>
   </div>
 </template>
@@ -39,6 +39,9 @@ export default {
   methods: {
     backToCatalog() {
       this.$router.push('/');
+    },
+    buyIt() {
+      this.$router.push('/order');
     },
   },
   computed: {

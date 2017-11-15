@@ -1,0 +1,36 @@
+@font-face {
+	font-family: 'fontawesome-webfont';
+	src: url("/static/fonts/fontawesome-webfont.woff2") format("woff2");
+}
+@font-face {
+	font-family: 'OpenSans';
+	src: url("/static/fonts/OpenSans.woff2") format("woff2");
+}
+@font-face {
+	font-family: 'OpenSansBold';
+	src: url("/static/fonts/OpenSansBold.woff2") format("woff2");
+}
+@font-face {
+	font-family: 'OpenSansItalic';
+	src: url("/static/fonts/OpenSansItalic.woff2") format("woff2")
+}
+@font-face {
+	font-family: 'OpenSansLight';
+	src: url("/static/fonts/OpenSansLight.woff2") format("woff2")
+}
+@font-face {
+	font-family: 'OpenSans-BoldItalic';
+	src: url("/static/fonts/OpenSans-BoldItalic.woff2") format("woff2")
+}
+@font-face {
+	font-family: 'OpenSans-SemiboldItalic';
+	src: url("/static/fonts/OpenSans-SemiboldItalic.woff2") format("woff2")
+}
+@font-face {
+	font-family: 'OpenSans-LightItalic';
+	src: url("/static/fonts/OpenSans-LightItalic.woff2") format("woff2")
+}
+@font-face {
+	font-family: 'OpenSans-Semibold';
+	src: url("/static/fonts/OpenSans-Semibold.woff2") format("woff2")
+}

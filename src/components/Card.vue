@@ -6,7 +6,7 @@
         <img :src="item.img" :alt="item.title" @click="goToItem(item)">
       </div>
       <div class="buttons">
-         <a class="myButtonRed">Купить</a> <a class="myButtonGreen" @click="goToItem(item)">Подробнее</a>
+         <a class="myButtonRed" @click="goToOrder(item)">Купить</a> <a class="myButtonGreen" @click="goToItem(item)">Подробнее</a>
       </div>
     </div>
   </div>
@@ -20,6 +20,10 @@ export default {
     goToItem(item) {
       this.$store.commit('getCurrentItem', item);
       this.$router.push(`/${item.id}`);
+    },
+    goToOrder(item) {
+      this.$store.commit('getCurrentItem', item);
+      this.$router.push('/order');
     },
   },
   computed: {
