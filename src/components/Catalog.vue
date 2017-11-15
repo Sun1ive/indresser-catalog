@@ -28,9 +28,17 @@ export default {
       return this.$store.state.currentItem;
     },
   },
+  mounted() {
+    const ITEM = this.$store.state.currentItem;
+    if (ITEM === '') {
+      this.$router.push('/');
+    }
+  },
 };
 </script>
 
 <style scoped>
-
+.container {
+  margin: 2rem 0;
+}
 </style>

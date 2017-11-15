@@ -5,8 +5,8 @@
       <div class="card-image">
         <img :src="item.img" :alt="item.title" @click="goToItem(item)">
       </div>
-      <div class="card-content">
-        <div class="content">{{ item.desc }}</div>
+      <div class="buttons">
+         <a class="myButtonRed">Купить</a> <a class="myButtonGreen">Подробнее</a>
       </div>
     </div>
   </div>
@@ -32,6 +32,11 @@ export default {
 
 <style scoped>
 .card-image img {
-  max-height: 500px;
+  max-height: 675px;
+}
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 0 2rem;
 }
 </style>
