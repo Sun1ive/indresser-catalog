@@ -1,9 +1,7 @@
 <template>
-  <main>
-    <div class="container is-fluid">
-      <app-Card></app-Card>
-    </div>
-  </main>
+  <div class="container is-fluid">
+    <app-Card></app-Card>
+  </div>
 </template>
 
 <script>

@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <app-Header></app-header>
-    <router-view/>
+    <main>
+      <router-view/>
+    </main>
     <app-Footer></app-Footer>
   </div>
 </template>
@@ -28,5 +30,8 @@ export default {
   color: #2c3e50;
   display: flex;
   flex-direction: column;
+}
+main {
+  min-height: 100vh;
 }
 </style>

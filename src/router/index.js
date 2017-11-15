@@ -14,7 +14,7 @@ export default new Router({
       component: Main,
     },
     {
-      path: '/catalog/:id',
+      path: '/:id',
       name: 'Catalog',
       component: Catalog,
     },

@@ -20,7 +20,7 @@ import store from '@/store/index';
 export default {
   methods: {
     goToItem(id) {
-      this.$router.push(`/catalog/${id}`);
+      this.$router.push(`/${id}`);
     },
   },
   computed: {

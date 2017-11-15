@@ -12,6 +12,19 @@ const store = [
       '/src/assets/dresses/d2bej3.jpg',
     ],
   },
+  {
+    title: 'Платье 0101',
+    price: 1090,
+    id: 'g1gt4e',
+    desc:
+      `Фасон: приталенный силуэт Цвет: розовый, черный Длина: на уровне колена Карманы: нет Рукав: крылышко Платье не на подкладке`,
+    img: '/src/assets/dresses/d18_1.jpg',
+    gallery: [
+      '/src/assets/dresses/d18_1.jpg',
+      '/src/assets/dresses/d18_2.jpg',
+      '/src/assets/dresses/d18_3.jpg',
+    ],
+  },
 ];
 
 export default store;
