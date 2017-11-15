@@ -33,6 +33,7 @@ export default {
 <style scoped>
 .card-image img {
   max-height: 675px;
+  cursor: pointer;
 }
 .buttons {
   display: flex;

@@ -57,11 +57,10 @@ export default {
 
 <style scoped>
 .container {
-  margin: 2rem 0;
   position: relative;
 }
 .button {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
 }
@@ -72,7 +71,7 @@ export default {
   margin-top: 1rem;
   max-width: 500px;
   margin: 0 auto;
-  font-size: responsive 1rem 1.3rem;
+  font-size: responsive 1rem 1.1rem;
 }
 .box .red {
   color: red;
