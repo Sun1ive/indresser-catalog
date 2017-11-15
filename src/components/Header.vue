@@ -1,14 +1,20 @@
 <template>
   <header>
     <div class="container is-fluid">
-      <img src="../assets/logo.png" alt="logo">
+      <img @click="goHome" src="../assets/logo.png" alt="logo">
       <a class="download" href="">Скачать каталог</a>
     </div>
   </header>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    goHome() {
+      this.$router.push('/');
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -17,5 +23,8 @@ export default {};
   display: flex;
   align-items: center;
   justify-content: space-around;
+}
+.container img {
+  cursor: pointer;
 }
 </style>

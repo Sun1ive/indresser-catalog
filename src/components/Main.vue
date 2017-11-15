@@ -1,13 +1,19 @@
 <template>
-  <div>
-    <div class="box">
-      <img src="../assets/dresses/d16_1.jpg" alt="">
+  <main>
+    <div class="container is-fluid">
+      <app-Card></app-Card>
     </div>
-  </div>
+  </main>
 </template>
 
 <script>
-export default {};
+import Card from './Card';
+
+export default {
+  components: {
+    'app-Card': Card,
+  },
+};
 </script>
 
 <style scoped>
