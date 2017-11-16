@@ -72,8 +72,8 @@ export default {
   flex-flow: column wrap;
   justify-content: center;
   font-size: responsive 1rem 1.1rem;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   font-size: responsive 1rem 1.5rem;
   padding: 1rem 2rem;
   font-family: Arial, Helvetica, sans-serif;

@@ -5,21 +5,15 @@
     <p>Цена: {{ currentItem.price }} грн</p>
     <img :src="currentItem.img" :alt="currentItem.title">
       <div class="field">
-        <label class="label">Name</label>
+        <label class="label">Ваше имя</label>
         <div class="control">
-          <input class="input" required v-model="userData.name" type="text" placeholder="Name">
-        </div>
-      </div>
-      <div class="field">
-        <label class="label">Phone</label>
-        <div class="control">
-          <input class="input" required v-model="userData.phone" type="text" placeholder="Phone">
+          <input class="input" required v-model="userData.name" type="text" placeholder="Введите Ваше имя">
         </div>
       </div>
       <div class="field mbot">
-        <label class="label">email</label>
+        <label class="label">Ваш телефон</label>
         <div class="control">
-          <input class="input" required v-model="userData.email" type="email" placeholder="email">
+          <input class="input" required v-model="userData.phone" type="text" placeholder="Введите Ваш номер телефона">
         </div>
       </div>
       <button type="submit" class="myButton Red">Подтвердить заказ</button>
@@ -46,11 +40,9 @@ export default {
         const order = {
           name: this.userData.name,
           phone: this.userData.phone,
-          email: this.userData.email,
           item: this.currentItem.title,
         };
-        const response = await axios.post('https://dresses-2efb4.firebaseio.com/catalog.json', order);
-        console.log(response);
+        await axios.post('https://dresses-2efb4.firebaseio.com/catalog.json', order);
       } catch (e) {
         console.log(e);
       }
@@ -64,8 +56,7 @@ export default {
           'sunliveua@gmail.com',
           'Заявка с каталога платьев catalog.indresser.com',
           `Пользователь: ${this.userData.name},
-          Телефон: ${this.userData.phone} \
-          Почта: ${this.userData.email} \n
+          Телефон: ${this.userData.phone}, 
           Заказал: ${this.currentItem.title}`,
           'mail.adm.tools',
           'coats@indresser.com',
@@ -99,7 +90,7 @@ export default {
   margin: 0 auto;
   padding: 1rem 2rem;
   border-radius: 8px;
-  box-shadow: 1px 1px 1px #333;
+  box-shadow: 2px 2px 10px #333;
 }
 h3 {
   font-size: responsive 1rem 1.5rem;

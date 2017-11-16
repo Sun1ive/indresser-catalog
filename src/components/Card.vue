@@ -6,8 +6,8 @@
         <img :src="item.img" :alt="item.title" @click="goToItem(item)">
       </div>
       <div class="buttons">
-         <a class="myButton Red" @click="goToOrder(item)">Купить</a>
-         <a class="myButton darkGold" @click="goToItem(item)">Детали</a>
+         <a class="myButton buy" @click="goToOrder(item)">Купить</a>
+         <a class="myButton" @click="goToItem(item)">Детали</a>
       </div>
     </div>
   </div>
@@ -59,6 +59,18 @@ a:hover {
   color: #fff;
   border-color: red
 }
+.buy {
+  background-color: red;
+  border-color: red;
+  color: #fff;
+  transition: .4s ease-in-out;
+}
+.buy:hover {
+  background-color: transparent;
+  color: #000;
+  border-color: #000;
+}
+
 @media (max-width: 1215px) {
   .buttons {
     padding: 0 1rem;

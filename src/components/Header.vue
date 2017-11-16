@@ -2,7 +2,7 @@
   <header>
     <div class="container is-fluid">
       <img @click="goHome" src="../assets/logo.png" alt="logo">
-      <a class="download button is-link" href="https://dresses.indresser.com/catalog.pdf" download>Скачать каталог</a>
+      <a class="download myButton" href="https://dresses.indresser.com/catalog.pdf" download>Скачать каталог</a>
     </div>
   </header>
 </template>
@@ -26,6 +26,18 @@ export default {
 }
 .container img {
   cursor: pointer;
+}
+
+a.myButton {
+  margin: 0;
+  max-width: 200px;
+  color: #000;
+  transition: .4s linear;
+}
+a.myButton:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #fff;
 }
 
 @media (max-width: 600px) {
