@@ -1,24 +1,24 @@
 <template>
   <div class="container is-fluid">
-    <form class="form" @submit.prevent="submit">
+    <form class="form" @submit.prevent="makeOrder">
     <h3>{{ currentItem.title }}</h3>
     <img :src="currentItem.img" :alt="currentItem.title">
       <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" v-model="userData.name" type="text" placeholder="Name">
+          <input class="input" required v-model="userData.name" type="text" placeholder="Name">
         </div>
       </div>
       <div class="field">
         <label class="label">Phone</label>
         <div class="control">
-          <input class="input" v-model="userData.phone" type="text" placeholder="Phone">
+          <input class="input" required v-model="userData.phone" type="text" placeholder="Phone">
         </div>
       </div>
       <div class="field">
         <label class="label">email</label>
         <div class="control">
-          <input class="input" v-model="userData.email" type="text" placeholder="email">
+          <input class="input" required v-model="userData.email" type="email" placeholder="email">
         </div>
       </div>
       <button type="submit" class="myButton Red">Подтвердить заказ</button>
@@ -52,6 +52,34 @@ export default {
         console.log(response);
       } catch (e) {
         console.log(e);
+      }
+    },
+    makeOrder() {
+      const validate = new RegExp('^[0-9]+$');
+      if (validate.test(this.userData.phone)) {
+        Email.send(
+          `coats@indresser.com`,
+          // 'info@indresser.com',
+          'sunliveua@gmail.com',
+          'Заявка с каталога платьев catalog.indresser.com',
+          `Пользователь: ${this.userData.name},
+          Телефон: ${this.userData.phone} \
+          Почта: ${this.userData.email} \n
+          Заказал: ${this.currentItem.title}`,
+          'mail.adm.tools',
+          'coats@indresser.com',
+          '3DLao3x1AC8t',
+        );
+        this.submit();
+
+        this.userData = {
+          name: '',
+          phone: '',
+          email: '',
+        };
+      } else {
+        alert('Введите корректный телефон');
+        this.userData.phone = '';
       }
     },
   },
