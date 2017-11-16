@@ -1,6 +1,6 @@
 <template>
 <div class="columns is-multiline is-centered">
-  <div class="column is-one-quarter is-half" v-for="(item, i) in catalog" :key="i">
+  <div class="column is-one-quarter" v-for="(item, i) in catalog" :key="i">
     <div class="card">
       <div class="card-image">
         <img :src="item.img" :alt="item.title" @click="goToItem(item)">
@@ -8,6 +8,11 @@
       <div class="buttons">
          <a class="myButton buy" @click="goToOrder(item)">Купить</a>
          <a class="myButton" @click="goToItem(item)">Детали</a>
+      </div>
+
+      <div class="prices">
+        <div class="oldPrice"><s>{{ item.price }}</s> грн</div>
+        <!-- <div class="newPrice"><b>{{ newPrice }}</b> грн</div> -->
       </div>
     </div>
   </div>
@@ -17,6 +22,10 @@
 
 <script>
 export default {
+  data() {
+    return {
+    }
+  },
   methods: {
     goToItem(item) {
       this.$store.commit('getCurrentItem', item);
@@ -25,13 +34,13 @@ export default {
     goToOrder(item) {
       this.$store.commit('getCurrentItem', item);
       this.$router.push('/order');
-    },
+    }
   },
   computed: {
     catalog() {
       return this.$store.state.items;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -48,22 +57,23 @@ export default {
   display: flex;
   justify-content: space-around;
   padding: 1rem 0 2rem;
+  margin-bottom: 0;
 }
 a {
   max-width: 120px;
   color: #333;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 a:hover {
   background-color: red;
   color: #fff;
-  border-color: red
+  border-color: red;
 }
 .buy {
   background-color: red;
   border-color: red;
   color: #fff;
-  transition: .4s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .buy:hover {
   background-color: transparent;
