@@ -7,6 +7,46 @@ const store = new Vuex.Store({
   state: {
     items: [
       {
+        title: 'Платье трапеция с коротким рукавом синее',
+        price: 890,
+        id: 'f6gjh6',
+        desc: {
+          color: 'Цвет: синий',
+          one: 'Фасон: платье трапеция с коротким рукавом',
+          two: 'Длина: выше колена',
+          three: 'Карманы: в боковых подрезах',
+          four: '',
+          five: 'Подкладка: да',
+        },
+        img: '/src/assets/dresses/d1blue_1.jpg',
+        gallery: [
+          '/src/assets/dresses/d1blue_1.jpg',
+          '/src/assets/dresses/d1blue_2.jpg',
+          '/src/assets/dresses/d1blue_3.jpg',
+          '/src/assets/dresses/d1blue_4.jpg',
+        ],
+      },
+      {
+        title: 'Платье трапеция с коротким рукавом черное',
+        price: 890,
+        id: 'zbf54g',
+        desc: {
+          color: 'Цвет: черный',
+          one: 'Фасон: платье трапеция с коротким рукавом',
+          two: 'Длина: выше колена',
+          three: 'Карманы: в боковых подрезах',
+          four: '',
+          five: 'Подкладка: да',
+        },
+        img: '/src/assets/dresses/d1black_4.jpg',
+        gallery: [
+          '/src/assets/dresses/d1black_2.jpg',
+          '/src/assets/dresses/d1black_1.jpg',
+          '/src/assets/dresses/d1black_3.jpg',
+          '/src/assets/dresses/d1black_4.jpg',
+        ],
+      },
+      {
         title: 'Платье трапеция бежевое',
         price: 990,
         id: 'f2s4h6',
@@ -103,6 +143,46 @@ const store = new Vuex.Store({
           '/src/assets/dresses/d9_2.jpg',
           '/src/assets/dresses/d9_3.jpg',
           '/src/assets/dresses/d9_4.jpg',
+        ],
+      },
+      {
+        title: 'Платье прямого силуэта фиолетовое',
+        price: 890,
+        id: 'fdsf43cx',
+        desc: {
+          color: 'Цвет: фиолетовый, вставка - бежевый',
+          one: 'Фасон: платье прямого силуэта',
+          two: 'Длина: до колена',
+          three: 'Карманы: есть',
+          four: '',
+          five: 'Подкладка: без',
+        },
+        img: '/src/assets/dresses/d9darkblue_3.jpg',
+        gallery: [
+          '/src/assets/dresses/d9darkblue_1.jpg',
+          '/src/assets/dresses/d9darkblue_2.jpg',
+          '/src/assets/dresses/d9darkblue_3.jpg',
+          '/src/assets/dresses/d9darkblue_4.jpg',
+        ],
+      },
+      {
+        title: 'Платье футляр с коротким рукавом прямого кроя',
+        price: 990,
+        id: 'zxcg32sd',
+        desc: {
+          color: 'Цвет: синий с бежевым воротником',
+          one: 'Фасон: платье футляр свободного силуэта',
+          two: 'Длина: выше колена',
+          three: 'Карманы: есть',
+          four: 'Рукав: короткий',
+          five: 'Подкладка: без',
+        },
+        img: '/src/assets/dresses/d15_3.jpg',
+        gallery: [
+          '/src/assets/dresses/d15_1.jpg',
+          '/src/assets/dresses/d15_2.jpg',
+          '/src/assets/dresses/d15_3.jpg',
+          '/src/assets/dresses/d15_4.jpg',
         ],
       },
       {
@@ -259,12 +339,7 @@ const store = new Vuex.Store({
         five: '',
       },
       img: '',
-      gallery: [
-        '1',
-        '2',
-        '3',
-        '4',
-      ],
+      gallery: ['1', '2', '3', '4'],
     },
   },
   mutations: {

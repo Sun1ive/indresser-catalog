@@ -19,7 +19,7 @@
       <div>{{ currentItem.desc.three }}</div>
       <div>{{ currentItem.desc.four }}</div>
       <div>{{ currentItem.desc.five }}</div>
-      <div class="myButton darkGold" @click="buyIt(currentItem)">Купить</div>
+      <div class="myButton Red" @click="buyIt(currentItem)">Купить</div>
     </div>
   </div>
 </template>

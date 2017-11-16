@@ -10,7 +10,8 @@ h1 {
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	max-width: 200px;
+	max-width: 150px;
+	margin: 0 auto;
 	font-family: OpenSans-Semibold, Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	cursor: pointer;

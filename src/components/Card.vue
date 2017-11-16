@@ -50,6 +50,6 @@ export default {
 }
 a {
   color: #fff;
-  max-width: 150px;
+  max-width: 120px;
 }
 </style>
