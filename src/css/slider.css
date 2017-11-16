@@ -2,3 +2,23 @@
   width: 500px !important;
   min-height: 700px;
 }
+
+@media (max-width: 900px) {
+  .slider {
+    width: 100% !important;
+    min-height: 700px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 520px) {
+  .slider {
+    min-height: 500px;
+  }
+}
+
+@media (max-width: 440px) {
+  .slider {
+    min-height: 400px;
+  }
+}

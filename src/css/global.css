@@ -3,31 +3,30 @@ h1 {
 }
 
 .myButton {
-	border-radius: 6px;
-	min-height: 30px;
 	font-family: 'Open-Sans-Bold';
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 	width: 100%;
 	max-width: 150px;
+	min-height: 50px;
+	border: 1px solid #333;
 	margin: 0 auto;
 	font-family: OpenSans-Semibold, Arial, Helvetica, sans-serif;
 	text-transform: uppercase;
 	cursor: pointer;
 }
+.myButton:after {
+	position: absolute;
+	content: "\203A";
+	top: 50%;
+	right: 12%;
+	transform: translateY(-55%)
+}
 
-.Red {
-	background-color: #FF2226;
-	transition: .4s linear;
-}
-.Red:hover {
-	background-color: rgb(148, 20, 20)
-}
-.darkGold {
-	background-color: #917438;
-	transition: .4s linear;
-}
-.darkGold:hover {
-	background-color: #644c1c;
+@media (max-width: 1215px) {
+	.myButton {
+		margin: 0.5rem 0;
+	}
 }

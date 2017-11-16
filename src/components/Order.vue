@@ -2,6 +2,7 @@
   <div class="container is-fluid">
     <form class="form" @submit.prevent="makeOrder">
     <h3>{{ currentItem.title }}</h3>
+    <p>Цена: {{ currentItem.price }} грн</p>
     <img :src="currentItem.img" :alt="currentItem.title">
       <div class="field">
         <label class="label">Name</label>
@@ -15,7 +16,7 @@
           <input class="input" required v-model="userData.phone" type="text" placeholder="Phone">
         </div>
       </div>
-      <div class="field">
+      <div class="field mbot">
         <label class="label">email</label>
         <div class="control">
           <input class="input" required v-model="userData.email" type="email" placeholder="email">
@@ -94,20 +95,32 @@ export default {
 <style scoped>
 .form {
   background-color: #fff;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 1rem 2rem;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px #333;
 }
 h3 {
-  font-size: responsive 1rem 2rem;
+  font-size: responsive 1rem 1.5rem;
   margin-bottom: 1rem;
 }
 .form .myButton {
   outline: none;
-  border: transparent;
-  color: #fff;
+  background-color: transparent;
   max-width: 200px;
+  transition: .4s ease;
 }
+.myButton:after {
+  right: 5%;
+}
+
+.form .myButton:hover {
+  background-color: red;
+  border-color: red;
+  color: #fff;
+}
+
 .form .label {
   text-align: left;
 }
@@ -115,5 +128,12 @@ img {
   max-width: 400px;
   max-height: 400px;
   border-radius: 6px;
+}
+.field {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.field + .mbot {
+  margin-bottom: 2rem;
 }
 </style>

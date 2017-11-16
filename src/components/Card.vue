@@ -6,7 +6,8 @@
         <img :src="item.img" :alt="item.title" @click="goToItem(item)">
       </div>
       <div class="buttons">
-         <a class="myButton Red" @click="goToOrder(item)">Купить</a> <a class="myButton darkGold" @click="goToItem(item)">Подробнее</a>
+         <a class="myButton Red" @click="goToOrder(item)">Купить</a>
+         <a class="myButton darkGold" @click="goToItem(item)">Детали</a>
       </div>
     </div>
   </div>
@@ -36,7 +37,7 @@ export default {
 
 <style scoped>
 .card {
-  background-color: #212121;
+  background-color: #fff;
 }
 
 .card-image img {
@@ -49,7 +50,18 @@ export default {
   padding: 1rem 0 2rem;
 }
 a {
-  color: #fff;
   max-width: 120px;
+  color: #333;
+  transition: .4s ease-in-out;
+}
+a:hover {
+  background-color: red;
+  color: #fff;
+  border-color: red
+}
+@media (max-width: 1215px) {
+  .buttons {
+    padding: 0 1rem;
+  }
 }
 </style>

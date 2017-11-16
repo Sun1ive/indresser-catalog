@@ -1,7 +1,8 @@
 <template>
   <div class="container is-fluid">
 
-    <a class="button is-link" @click="backToCatalog">Вернуться назад в каталог</a>
+    <!-- <a class="button is-link" @click="backToCatalog">Вернуться назад в каталог</a> -->
+    <div class="myButton back" @click="backToCatalog">Вернуться назад в каталог</div>
 
     <slider animation="fade">
       <slider-item height="500px" v-for="(item, i) in currentItem.gallery" :key="i">
@@ -78,19 +79,45 @@ export default {
   font-family: Arial, Helvetica, sans-serif;
 }
 .box h3 {
-  font-size: 2rem;
+  font-size: responsive 1rem 2rem;
 }
 .box .red {
   color: red;
   font-size: responsive 1rem 1.5rem;
 }
-.button {
+.back {
   position: absolute;
   left: 50%;
-  bottom: 0;
+  bottom: -2%;
   transform: translateX(-50%);
+  max-width: 270px;
+  font-size: responsive .7rem 1rem;
 }
 .myButton {
   margin-top: 1rem;
+  transition: .4s linear;
+  background-color: #fff;
+  color: #000;
+}
+.myButton:hover {
+  background-color: red;
+  color: #fff;
+}
+.myButton:after {
+  right: 15px;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    text-align: center;
+    width: 100%;
+  }
+  .myButton {
+    margin: 1rem auto;
+  }
 }
 </style>
