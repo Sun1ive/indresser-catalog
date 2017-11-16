@@ -18,13 +18,19 @@
       </div>
       <button type="submit" class="myButton Red">Подтвердить заказ</button>
     </form>
+
+    <app-Thanks></app-Thanks>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
+import Thanks from './Thank';
 
 export default {
+  components: {
+    'app-Thanks': Thanks,
+  },
   data() {
     return {
       userData: {
@@ -69,6 +75,9 @@ export default {
           phone: '',
           email: '',
         };
+
+        this.$store.commit('showModal');
+        this.$router.push('/');
       } else {
         alert('Введите корректный телефон');
         this.userData.phone = '';

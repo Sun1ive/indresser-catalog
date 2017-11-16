@@ -1,7 +1,6 @@
 <template>
   <div class="container is-fluid">
 
-    <!-- <a class="button is-link" @click="backToCatalog">Вернуться назад в каталог</a> -->
     <div class="myButton back" @click="backToCatalog">Вернуться назад в каталог</div>
 
     <slider animation="fade">
