@@ -1,6 +1,6 @@
 <template>
-<div class="columns is-multiline">
-  <div class="column is-one-quarter" v-for="(item, i) in catalog" :key="i">
+<div class="columns is-multiline is-centered">
+  <div class="column is-one-quarter is-half" v-for="(item, i) in catalog" :key="i">
     <div class="card">
       <div class="card-image">
         <img :src="item.img" :alt="item.title" @click="goToItem(item)">

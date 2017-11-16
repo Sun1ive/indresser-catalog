@@ -46,8 +46,8 @@ export default {
           name: this.userData.name,
           phone: this.userData.phone,
           email: this.userData.email,
-          item: this.currentItem.title
-        }
+          item: this.currentItem.title,
+        };
         const response = await axios.post('https://dresses-2efb4.firebaseio.com/catalog.json', order);
         console.log(response);
       } catch (e) {
@@ -78,6 +78,7 @@ h3 {
   outline: none;
   border: transparent;
   color: #fff;
+  max-width: 200px;
 }
 .form .label {
   text-align: left;
