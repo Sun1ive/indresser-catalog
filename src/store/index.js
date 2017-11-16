@@ -366,21 +366,7 @@ const store = new Vuex.Store({
         ],
       },
     ],
-    currentItem: {
-      title: '',
-      price: '',
-      id: '',
-      desc: {
-        color: '',
-        one: '',
-        two: '',
-        three: '',
-        four: '',
-        five: '',
-      },
-      img: '',
-      gallery: ['1', '2', '3', '4'],
-    },
+    currentItem: '',
   },
   mutations: {
     getCurrentItem(state, payload) {

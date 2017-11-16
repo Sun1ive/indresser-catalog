@@ -17,13 +17,6 @@ h1 {
 	text-transform: uppercase;
 	cursor: pointer;
 }
-.myButton:after {
-	position: absolute;
-	content: "\203A";
-	top: 50%;
-	right: 12%;
-	transform: translateY(-55%)
-}
 
 @media (max-width: 1215px) {
 	.myButton {

@@ -94,7 +94,7 @@ export default {
   font-size: responsive .7rem 1rem;
 }
 .myButton {
-  margin-top: 1rem;
+  margin: 1rem 0;
   transition: .4s linear;
   background-color: #fff;
   color: #000;
@@ -102,11 +102,8 @@ export default {
 .myButton:hover {
   background-color: red;
   color: #fff;
+  border-color: red;
 }
-.myButton:after {
-  right: 15px;
-}
-
 @media (max-width: 900px) {
   .container {
     flex-direction: column;

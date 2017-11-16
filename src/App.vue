@@ -33,7 +33,7 @@ export default {
   background-image: url('./assets/bg.png');
 }
 main {
-  /* min-height: 100vh; */
+  min-height: 83vh;
   margin: 1rem;
 }
 </style>

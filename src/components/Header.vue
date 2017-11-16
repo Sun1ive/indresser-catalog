@@ -2,7 +2,7 @@
   <header>
     <div class="container is-fluid">
       <img @click="goHome" src="../assets/logo.png" alt="logo">
-      <a class="download" href="">Скачать каталог</a>
+      <a class="download button is-link" href="https://dresses.indresser.com/catalog.pdf" download>Скачать каталог</a>
     </div>
   </header>
 </template>
@@ -26,5 +26,14 @@ export default {
 }
 .container img {
   cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+  .container img {
+    margin: 1rem 0;
+  }
 }
 </style>
