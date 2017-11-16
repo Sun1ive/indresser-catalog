@@ -6,19 +6,19 @@
       <div class="field">
         <label class="label">Name</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Name">
+          <input class="input" v-model="userData.name" type="text" placeholder="Name">
         </div>
       </div>
       <div class="field">
         <label class="label">Phone</label>
         <div class="control">
-          <input class="input" type="text" placeholder="Phone">
+          <input class="input" v-model="userData.phone" type="text" placeholder="Phone">
         </div>
       </div>
       <div class="field">
         <label class="label">email</label>
         <div class="control">
-          <input class="input" type="text" placeholder="email">
+          <input class="input" v-model="userData.email" type="text" placeholder="email">
         </div>
       </div>
       <button type="submit" class="myButton Red">Подтвердить заказ</button>
@@ -27,6 +27,8 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   data() {
     return {
@@ -38,7 +40,19 @@ export default {
     };
   },
   methods: {
-    submit() {
+    async submit() {
+      try {
+        const order = {
+          name: this.userData.name,
+          phone: this.userData.phone,
+          email: this.userData.email,
+          item: this.currentItem.title
+        }
+        const response = await axios.post('https://dresses-2efb4.firebaseio.com/catalog.json', order);
+        console.log(response);
+      } catch (e) {
+        console.log(e);
+      }
     },
   },
   computed: {
