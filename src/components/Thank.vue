@@ -14,6 +14,9 @@ export default {
   methods: {
     closeThanks() {
       this.$store.commit('closeModal');
+      setTimeout(() => {
+        this.$router.push('/');
+      }, 300);
     },
   },
   computed: {

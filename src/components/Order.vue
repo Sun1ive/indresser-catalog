@@ -77,7 +77,7 @@ export default {
         };
 
         this.$store.commit('showModal');
-        this.$router.push('/');
+        // this.$router.push('/');
       } else {
         alert('Введите корректный телефон');
         this.userData.phone = '';
