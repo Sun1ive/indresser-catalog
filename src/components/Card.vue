@@ -21,8 +21,7 @@
 <script>
 export default {
   data() {
-    return {
-    }
+    return {};
   },
   methods: {
     goToItem(item) {
@@ -32,13 +31,13 @@ export default {
     goToOrder(item) {
       this.$store.commit('getCurrentItem', item);
       this.$router.push('/order');
-    }
+    },
   },
   computed: {
     catalog() {
       return this.$store.state.items;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -60,12 +59,12 @@ export default {
   position: relative;
   overflow: hidden;
   max-height: 477px;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 .card-image img {
   max-height: 675px;
   cursor: pointer;
-  transition: .2s linear;
+  transition: 0.2s linear;
 }
 .card-image img:hover {
   transform: scale(1.1);

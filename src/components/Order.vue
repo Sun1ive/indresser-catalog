@@ -1,6 +1,7 @@
 <template>
   <div class="container is-fluid">
     <form class="form" @submit.prevent="makeOrder">
+      <div class="myButton" @click="$router.push('/')">Назад в каталог</div>
     <h3>{{ currentItem.title }}</h3>
     <p><strong>Цена: {{ currentItem.price }} грн</strong></p>
     <img :src="currentItem.img" :alt="currentItem.title">
@@ -48,7 +49,10 @@ export default {
           phone: this.userData.phone,
           item: this.currentItem.title,
         };
-        await axios.post('https://dresses-2efb4.firebaseio.com/catalog.json', order);
+        await axios.post(
+          'https://dresses-2efb4.firebaseio.com/catalog.json',
+          order,
+        );
       } catch (e) {
         console.log(e);
       }
@@ -58,8 +62,8 @@ export default {
       if (validate.test(this.userData.phone)) {
         Email.send(
           `coats@indresser.com`,
-          // 'info@indresser.com',
-          'sunliveua@gmail.com',
+          'info@indresser.com',
+          // 'sunliveua@gmail.com',
           'Заявка с каталога платьев catalog.indresser.com',
           `Пользователь: ${this.userData.name},
           Телефон: ${this.userData.phone}, 
@@ -108,7 +112,7 @@ h3 {
   outline: none;
   background-color: transparent;
   max-width: 200px;
-  transition: .4s ease;
+  transition: 0.4s ease;
 }
 .myButton:after {
   right: 5%;

@@ -1,7 +1,9 @@
 <template>
   <div class="container is-fluid">
 
-    <div class="myButton back" @click="backToCatalog">Вернуться назад в каталог</div>
+    <!-- <div class="myButton back" @click="backToCatalog">Вернуться назад в каталог</div> -->
+
+    <div class="myButton back" @click="backToCatalog">Назад в каталог</div>
 
     <slider animation="fade">
       <slider-item height="500px" v-for="(item, i) in currentItem.gallery" :key="i">
@@ -12,6 +14,7 @@
     </slider>
 
     <div class="box">
+      
       <h3>{{ currentItem.title }}</h3>
       <div>Цена: <span class="red">{{ currentItem.price }}</span> грн</div>
       <div>{{ currentItem.desc.one }}</div>
@@ -73,12 +76,13 @@ export default {
   font-size: responsive 1rem 1.1rem;
   background-color: #fff;
   color: #000;
-  font-size: responsive 1rem 1.5rem;
+  font-size: responsive 1rem 1.4rem;
   padding: 1rem 2rem;
   font-family: Arial, Helvetica, sans-serif;
 }
 .box h3 {
   font-size: responsive 1rem 2rem;
+  font-weight: bold;
 }
 .box .red {
   color: red;
@@ -90,7 +94,7 @@ export default {
   bottom: -2%;
   transform: translateX(-50%);
   max-width: 270px;
-  font-size: responsive .7rem 1rem;
+  font-size: responsive 1rem 1.3rem;
 }
 .myButton {
   margin: 1rem 0;
