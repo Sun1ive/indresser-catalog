@@ -102,5 +102,14 @@ a:hover {
   .buttons {
     padding: 0 1rem;
   }
+  a {
+    min-height: 35px;
+  }
+}
+
+@media (max-width: 770px) {
+  .card-image {
+    max-height: 650px;
+  }
 }
 </style>

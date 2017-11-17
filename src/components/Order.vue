@@ -2,7 +2,7 @@
   <div class="container is-fluid">
     <form class="form" @submit.prevent="makeOrder">
     <h3>{{ currentItem.title }}</h3>
-    <p>Цена: {{ currentItem.price }} грн</p>
+    <p><strong>Цена: {{ currentItem.price }} грн</strong></p>
     <img :src="currentItem.img" :alt="currentItem.title">
       <div class="field">
         <label class="label">Ваше имя</label>
@@ -13,7 +13,7 @@
       <div class="field mbot">
         <label class="label">Ваш телефон</label>
         <div class="control">
-          <input class="input" required v-model="userData.phone" type="text" placeholder="Введите Ваш номер телефона">
+          <input class="input" required v-model="userData.phone" type="text" placeholder="Введите Ваш телефон">
         </div>
       </div>
       <button type="submit" class="myButton Red">Подтвердить заказ</button>
@@ -77,7 +77,6 @@ export default {
         };
 
         this.$store.commit('showModal');
-        // this.$router.push('/');
       } else {
         alert('Введите корректный телефон');
         this.userData.phone = '';
@@ -120,7 +119,6 @@ h3 {
   border-color: red;
   color: #fff;
 }
-
 .form .label {
   text-align: left;
   margin-top: 1rem;
@@ -137,5 +135,11 @@ img {
 }
 .field + .mbot {
   margin-bottom: 2rem;
+}
+
+@media (max-width: 390px) {
+  img {
+    max-width: 200px;
+  }
 }
 </style>
