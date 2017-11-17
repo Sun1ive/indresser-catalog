@@ -123,6 +123,8 @@ h3 {
 
 .form .label {
   text-align: left;
+  margin-top: 1rem;
+  margin-bottom: 0;
 }
 img {
   max-width: 400px;

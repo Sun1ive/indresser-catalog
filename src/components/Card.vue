@@ -1,23 +1,21 @@
 <template>
-<div class="columns is-multiline is-centered">
-  <div class="column is-one-quarter" v-for="(item, i) in catalog" :key="i">
-    <div class="card">
-      <div class="card-image">
-        <img :src="item.img" :alt="item.title" @click="goToItem(item)">
-      </div>
-      <div class="buttons">
-         <a class="myButton buy" @click="goToOrder(item)">Купить</a>
-         <a class="myButton" @click="goToItem(item)">Детали</a>
-      </div>
-
-      <div class="prices">
-        <div class="oldPrice"><s>{{ item.price }}</s> грн</div>
-        <!-- <div class="newPrice"><b>{{ newPrice }}</b> грн</div> -->
+  <div class="columns is-multiline is-centered">
+    <div class="column is-one-quarter" v-for="(item, i) in catalog" :key="i">
+      <div class="card">
+        <div class="card-image">
+          <img :src="item.img" :alt="item.title" @click="goToItem(item)">
+          <div class="prices">
+            <div class="oldPrice"><s>{{ item.price }} грн</s></div>
+            <div class="newPrice"><b>{{ item.price - 100 }}</b> грн</div>
+          </div>
+        </div>
+        <div class="buttons">
+          <a class="myButton buy" @click="goToOrder(item)">Купить</a>
+          <a class="myButton" @click="goToItem(item)">Детали</a>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
 </template>
 
 <script>
@@ -47,11 +45,30 @@ export default {
 <style scoped>
 .card {
   background-color: #fff;
+  overflow: hidden;
 }
-
+.prices {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+}
+.newPrice {
+  color: red;
+  font-size: responsive 1rem 1.3rem;
+}
+.card-image {
+  position: relative;
+  overflow: hidden;
+  max-height: 477px;
+  transition: .2s linear;
+}
 .card-image img {
   max-height: 675px;
   cursor: pointer;
+  transition: .2s linear;
+}
+.card-image img:hover {
+  transform: scale(1.1);
 }
 .buttons {
   display: flex;
