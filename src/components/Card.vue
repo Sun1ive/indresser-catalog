@@ -19,10 +19,9 @@
 </template>
 
 <script>
+// @flow
+
 export default {
-  data() {
-    return {};
-  },
   methods: {
     goToItem(item) {
       this.$store.commit('getCurrentItem', item);
@@ -43,7 +42,7 @@ export default {
 
 <style scoped>
 .card {
-  background-color: #fff;
+  background-color: #fafafa;
   overflow: hidden;
 }
 .prices {

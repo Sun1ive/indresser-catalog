@@ -87,7 +87,7 @@ export default {
   font-size: responsive 1rem 1.1rem;
   background-color: #fff;
   color: #000;
-  font-size: responsive 1rem 1.4rem;
+  font-size: responsive .9rem 1.4rem;
   padding: 1rem 2rem;
   font-family: Arial, Helvetica, sans-serif;
 }
