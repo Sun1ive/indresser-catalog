@@ -18,6 +18,11 @@ const store = new Vuex.Store({
           four: '',
           five: 'Подкладка: да',
         },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
+        },
         img: '/static/dresses/d1blue_1.jpg',
         gallery: [
           '/static/dresses/d1blue_1.jpg',
@@ -37,6 +42,11 @@ const store = new Vuex.Store({
           three: 'Карманы: в боковых подрезах',
           four: '',
           five: 'Подкладка: да',
+        },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
         },
         img: '/static/dresses/d1black_4.jpg',
         gallery: [
@@ -58,6 +68,11 @@ const store = new Vuex.Store({
           four: '',
           five: 'Подкладка: да',
         },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
+        },
         img: '/static/dresses/d2bej1.jpg',
         gallery: [
           '/static/dresses/d2bej1.jpg',
@@ -77,6 +92,11 @@ const store = new Vuex.Store({
           three: 'Карманы: в боковых швах',
           four: '',
           five: 'Подкладка: да',
+        },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
         },
         img: '/static/dresses/d2blue1.jpg',
         gallery: [
@@ -98,6 +118,10 @@ const store = new Vuex.Store({
           four: 'Особенности: отрезное по талии',
           five: 'Подкладка: да',
         },
+        comp: {
+          one: 'Вискоза: 20%',
+          two: 'полиэстер: 80%',
+        },
         img: '/static/dresses/d3black1.jpg',
         gallery: [
           '/static/dresses/d3black1.jpg',
@@ -118,6 +142,10 @@ const store = new Vuex.Store({
           four: 'Особенности: отрезное по талии',
           five: 'Подкладка: да',
         },
+        comp: {
+          one: 'Вискоза: 20%',
+          two: 'полиэстер: 80%',
+        },
         img: '/static/dresses/d3blue1.jpg',
         gallery: [
           '/static/dresses/d3blue1.jpg',
@@ -136,6 +164,11 @@ const store = new Vuex.Store({
           three: 'Карманы: нет',
           four: 'Рукав: крылышко',
           five: 'Подкладка: нет',
+        },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
         },
         img: '/static/dresses/d6pink_4.jpg',
         gallery: [
@@ -157,6 +190,11 @@ const store = new Vuex.Store({
           four: 'Рукав: крылышко',
           five: 'Подкладка: нет',
         },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
+        },
         img: '/static/dresses/d6black_3.jpg',
         gallery: [
           '/static/dresses/d6black_1.jpg',
@@ -176,6 +214,11 @@ const store = new Vuex.Store({
           three: 'Карманы: есть',
           four: '',
           five: 'Подкладка: без',
+        },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
         },
         img: '/static/dresses/d9_1.jpg',
         gallery: [
@@ -197,6 +240,11 @@ const store = new Vuex.Store({
           four: '',
           five: 'Подкладка: без',
         },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
+        },
         img: '/static/dresses/d9darkblue_3.jpg',
         gallery: [
           '/static/dresses/d9darkblue_1.jpg',
@@ -216,6 +264,11 @@ const store = new Vuex.Store({
           three: 'Карманы: есть',
           four: 'Рукав: короткий',
           five: 'Подкладка: без',
+        },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
         },
         img: '/static/dresses/d15_3.jpg',
         gallery: [
@@ -237,6 +290,11 @@ const store = new Vuex.Store({
           four: 'Особенности: по низу рукава складка',
           five: 'Подкладка: есть',
         },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
+        },
         img: '/static/dresses/d16_1.jpg',
         gallery: [
           '/static/dresses/d16_1.jpg',
@@ -256,6 +314,11 @@ const store = new Vuex.Store({
           three: 'Карманы: есть',
           four: '',
           five: 'Подкладка: нет',
+        },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
         },
         img: '/static/dresses/d18_1.jpg',
         gallery: [
@@ -277,6 +340,11 @@ const store = new Vuex.Store({
           four: 'Особенности: Кокетка по полочке и спине. Со шлицей',
           five: 'Подкладка: нет',
         },
+        comp: {
+          one: 'Вискоза: 45%',
+          two: 'полиэстер: 53%',
+          three: 'спандекс: 2%',
+        },
         img: '/static/dresses/d18_black_bej1.jpg',
         gallery: [
           '/static/dresses/d18_black_bej1.jpg',
@@ -296,6 +364,10 @@ const store = new Vuex.Store({
           three: 'Карманы: нет',
           four: 'Особенности: по спинке молния',
           five: 'Подкладка: нет',
+        },
+        comp: {
+          one: 'Вискоза: 20%',
+          two: 'полиэстер: 80%',
         },
         img: '/static/dresses/d19_black1.jpg',
         gallery: [
@@ -317,6 +389,10 @@ const store = new Vuex.Store({
           four: 'Особенности: по спинке молния',
           five: 'Подкладка: нет',
         },
+        comp: {
+          one: 'Вискоза: 20%',
+          two: 'полиэстер: 80%',
+        },
         img: '/static/dresses/d19_red1.jpg',
         gallery: [
           '/static/dresses/d19_red1.jpg',
@@ -337,6 +413,10 @@ const store = new Vuex.Store({
           four: '',
           five: 'Подкладка: нет',
         },
+        comp: {
+          one: 'Вискоза: 20%',
+          two: 'полиэстер: 80%',
+        },
         img: '/static/dresses/d20_bordo1.jpg',
         gallery: [
           '/static/dresses/d20_bordo1.jpg',
@@ -356,6 +436,10 @@ const store = new Vuex.Store({
           three: 'Карманы: есть',
           four: '',
           five: 'Подкладка: нет',
+        },
+        comp: {
+          one: 'Вискоза: 20%',
+          two: 'полиэстер: 80%',
         },
         img: '/static/dresses/d20_darkblue1.jpg',
         gallery: [
