@@ -22,6 +22,9 @@
       <div>{{ currentItem.desc.three }}</div>
       <div>{{ currentItem.desc.four }}</div>
       <div>{{ currentItem.desc.five }}</div>
+
+      <div>Состав: <span>{{ currentItem.comp.one }}</span></div>
+
       <div class="myButton Red" @click="buyIt(currentItem)">Купить</div>
     </div>
   </div>
@@ -66,6 +69,10 @@ export default {
   display: flex;
   justify-content: center;
   padding-bottom: 4rem;
+}
+.comp {
+  display: flex;
+  align-items: center;
 }
 .box {
   min-width: 200px;

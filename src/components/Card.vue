@@ -58,7 +58,7 @@ export default {
 .card-image {
   position: relative;
   overflow: hidden;
-  max-height: 477px;
+  max-height: 405px;
   transition: 0.2s linear;
 }
 .card-image img {
@@ -72,8 +72,10 @@ export default {
 .buttons {
   display: flex;
   justify-content: space-around;
-  padding: 1rem 0 2rem;
+  padding: 1.5rem 0;
   margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
 }
 a {
   max-width: 120px;
