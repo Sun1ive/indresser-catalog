@@ -457,10 +457,10 @@ const store = new Vuex.Store({
     getCurrentItem(state, payload) {
       state.currentItem = payload;
     },
-    showModal: state => {
+    showModal: (state) => {
       state.isActiveModal = true;
     },
-    closeModal: state => {
+    closeModal: (state) => {
       state.isActiveModal = false;
     },
   },

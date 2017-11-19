@@ -23,7 +23,11 @@
       <div>{{ currentItem.desc.four }}</div>
       <div>{{ currentItem.desc.five }}</div>
 
-      <div>Состав: <span>{{ currentItem.comp.one }}</span></div>
+      <div>Состав: 
+        <span>{{ currentItem.comp.one }}</span>
+        <span>{{ currentItem.comp.two }}</span>
+        <span>{{ currentItem.comp.three }}</span>
+      </div>
 
       <div class="myButton Red" @click="buyIt(currentItem)">Купить</div>
     </div>
